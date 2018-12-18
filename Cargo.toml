@@ -1,0 +1,38 @@
+[package]
+name = "hdc1080"
+version = "0.1.0"
+authors = ["Ioan Herisanu <ioan.herisanu.dev@gmail.com>"]
+repository = "https://github.com/iohe/hdc1080-rs"
+license = "MIT OR Apache-2.0"
+description = "Platform-agnostic Rust driver for the HDC1080 digital humidity and temperature sensor."
+readme = "README.md"
+keywords = ["temperature", "sensor", "i2c", "driver"]
+categories = ["embedded", "hardware-support", "no-std"]
+homepage = "https://github.com/iohe/hdc1080-rs"
+documentation = "https://docs.rs/hdc1080"
+include = [
+    "**/*.rs",
+    "/Cargo.toml",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/LICENSE-MIT",
+    "/LICENSE-APACHE",
+]
+edition = "2018"
+
+[badges]
+travis-ci = { repository = "iohe/hdc1080-rs", branch = "master" }
+coveralls = { repository = "iohe/hdc1080-rs", branch = "master", service = "github" }
+maintenance = { status = "actively-developed" }
+
+[dependencies]
+i2cdev = "0.4.1"
+byteorder = {version = "1", default-features=false}
+
+
+[dev-dependencies]
+i2cdev = "0.4.1"
+byteorder = {version = "1", default-features=false}
+
+[profile.release]
+lto = true
