@@ -17,7 +17,6 @@ fn main() {
     config.set_mode(Mode::TAndH);
     config.set_temp_resolution(TResolution::_11);
     config.set_humidity_resolution(HResolution::_8);
-    println!("Bits = {:x}", config.bits);
     sensor.write_config(config).unwrap();
 
     let config2 = sensor.read_config().unwrap();
@@ -37,8 +36,7 @@ fn main() {
     config.set_mode(Mode::TAndH);
     config.set_temp_resolution(TResolution::_14);
     config.set_humidity_resolution(HResolution::_14);
-    println!("Reading TH {:b} --- ", config.bits);
-
+    
     sensor.write_config(config).unwrap();
     
     thread::sleep(time::Duration::from_millis(500u64));

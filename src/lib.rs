@@ -185,8 +185,7 @@ impl ConfigBitFlags {
 /// Config register content to be sent
 #[derive(Debug, Clone, Copy)]
 pub struct Config {
-    ///bits
-   pub bits: u16,
+    bits: u16,
 }
 
 
